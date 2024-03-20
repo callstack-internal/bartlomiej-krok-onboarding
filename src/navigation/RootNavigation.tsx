@@ -11,9 +11,17 @@ const Stack = createNativeStackNavigator<RootNavigationParamList>();
 export const RootNavigation = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name={'WEATHER_LIST'} component={WeatherList} />
-        <Stack.Screen name={'WEATHER_DETAILS'} component={WeatherDetails} />
+      <Stack.Navigator screenOptions={{ title: 'Weather' }}>
+        <Stack.Screen
+          name={'WEATHER_LIST'}
+          component={WeatherList}
+          options={{ title: 'Weather' }}
+        />
+        <Stack.Screen
+          name={'WEATHER_DETAILS'}
+          component={WeatherDetails}
+          options={{ title: 'Details' }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
