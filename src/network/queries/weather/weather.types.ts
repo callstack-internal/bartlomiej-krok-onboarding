@@ -1,9 +1,9 @@
 export type WeatherItem = {
   id: number;
   cityName: string;
-  weatherIconCode: string;
   weatherDescription: string;
-  temp: number;
+  temp: string;
+  imageUri: string;
   humidity: number;
   pressure: number;
   windSpeed: number;

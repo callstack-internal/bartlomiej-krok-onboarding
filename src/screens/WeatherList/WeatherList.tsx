@@ -6,6 +6,7 @@ import {
   StyleSheet,
 } from 'react-native';
 
+import { Divider } from '../../components/Divider';
 import { ListEmptyComponent } from '../../components/ListEmptyComponent';
 import { ScreenLoading } from '../../components/ScreenLoading';
 import { SomethingWentWrong } from '../../components/SomethingWentWrong';
@@ -32,7 +33,7 @@ export const WeatherList = () => {
 
   const renderItem = useCallback(
     ({ item }: ListRenderItemInfo<WeatherItem>) => {
-      return <WeatherListItem item={item} onPress={onItemPress} />;
+      return <WeatherListItem weather={item} onPress={onItemPress} />;
     },
     [onItemPress],
   );
@@ -59,7 +60,7 @@ export const WeatherList = () => {
       }
       contentContainerStyle={styles.container}
       keyExtractor={keyExtractor}
-      // ItemSeparatorComponent={Divider}
+      ItemSeparatorComponent={Divider}
       renderItem={renderItem}
     />
   );

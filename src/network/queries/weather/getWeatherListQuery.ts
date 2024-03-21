@@ -19,10 +19,13 @@ const selectWeatherList = (data: WeatherListResponse): WeatherItem[] =>
     id: item.id,
     cityName: item.name,
     weatherDescription: item.weather[0]?.main,
-    weatherIconCode: item.weather[0]?.icon,
-    temp: item.main.temp,
+    temp: `${item.main.temp} °F`,
+    imageUri: getImageUri(item.weather[0]?.icon),
     humidity: item.main.humidity,
     pressure: item.main.pressure,
     windSpeed: item.wind.speed,
     cloudCover: item.clouds.all,
   }));
+
+const getImageUri = (id: string) =>
+  `https://openweathermap.org/img/w/${id}.png`;
