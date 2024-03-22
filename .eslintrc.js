@@ -1,6 +1,10 @@
 module.exports = {
   root: true,
-  extends: ['@react-native', 'plugin:react/jsx-runtime'],
+  extends: [
+    '@react-native',
+    'plugin:react/jsx-runtime',
+    'plugin:@tanstack/eslint-plugin-query/recommended',
+  ],
   plugins: ['import'],
   overrides: [
     {
