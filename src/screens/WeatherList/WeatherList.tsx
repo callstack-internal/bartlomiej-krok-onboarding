@@ -6,17 +6,19 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import { Divider } from '../../components/Divider';
-import { ListEmptyComponent } from '../../components/ListEmptyComponent';
-import { ScreenLoading } from '../../components/ScreenLoading';
-import { SomethingWentWrong } from '../../components/SomethingWentWrong';
-import { WeatherListItem } from '../../components/WeatherListItem';
-import { useRefreshing } from '../../hooks/useRefreshing';
-import { Screens } from '../../navigation/routes.types';
-import { useRootNavigation } from '../../navigation/useRootNavigation';
-import { weatherCityIds } from '../../network/constants/data/weatherCityIds';
-import { useWeatherListQuery } from '../../network/queries/weather/getWeatherListQuery';
-import { WeatherItem } from '../../network/queries/weather/weather.types';
+import {
+  ComplexListItem,
+  Divider,
+  ListEmptyComponent,
+  ScreenLoading,
+  SomethingWentWrong,
+} from 'src/components';
+import { useRefreshing } from 'src/hooks/useRefreshing';
+import { Screens } from 'src/navigation/routes.types';
+import { useRootNavigation } from 'src/navigation/useRootNavigation';
+import { weatherCityIds } from 'src/network/constants/data/weatherCityIds';
+import { useWeatherListQuery } from 'src/network/queries/weather/getWeatherListQuery';
+import { WeatherItem } from 'src/network/queries/weather/weather.types';
 
 export const WeatherList = () => {
   const { navigate } = useRootNavigation();
@@ -33,7 +35,15 @@ export const WeatherList = () => {
 
   const renderItem = useCallback(
     ({ item }: ListRenderItemInfo<WeatherItem>) => {
-      return <WeatherListItem weather={item} onPress={onItemPress} />;
+      return (
+        <ComplexListItem
+          title={item.cityName}
+          subtitle={item.weatherDescription}
+          imageUri={item.imageUri}
+          labelText={item.temp}
+          onPress={() => onItemPress(item)}
+        />
+      );
     },
     [onItemPress],
   );

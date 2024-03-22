@@ -1,7 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
 
-import { WeatherListResponse } from '../../api/api.types';
-import { getWeatherList } from '../../services/getWeatherList';
+import { WeatherListResponse } from 'src/network/api/api.types';
+import { getWeatherList } from 'src/network/services/getWeatherList';
+
 import { QueryKeys } from '../query.types';
 
 import { WeatherItem } from './weather.types';

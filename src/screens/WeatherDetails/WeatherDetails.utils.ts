@@ -1,5 +1,5 @@
-import { ListItemHorizontalProps } from '../../components/ListItemHorizontal/ListItemHorizontal';
-import { WeatherItem } from '../../network/queries/weather/weather.types';
+import { ListItemHorizontalProps } from 'src/components';
+import { WeatherItem } from 'src/network/queries/weather/weather.types';
 
 export function mapWeatherItemToList(
   cityWeather: WeatherItem,

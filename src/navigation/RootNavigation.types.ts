@@ -1,6 +1,6 @@
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
-import { WeatherItem } from '../network/queries/weather/weather.types';
+import { WeatherItem } from 'src/network/queries/weather/weather.types';
 
 import { Screens } from './routes.types';
 

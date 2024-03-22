@@ -1,7 +1,7 @@
-import { WeatherListResponse } from '../api/api.types';
-import { apiClient } from '../api/apiClient';
-import { ApiRoutes } from '../api/apiRoutes';
-import { API_KEY } from '../constants/config';
+import { WeatherListResponse } from 'src/network/api/api.types';
+import { apiClient } from 'src/network/api/apiClient';
+import { ApiRoutes } from 'src/network/api/apiRoutes';
+import { API_KEY } from 'src/network/constants/config';
 
 type WeatherListParams = {
   ids: number[];

@@ -1,1 +1,4 @@
-export { ListItemHorizontal } from './ListItemHorizontal';
+export {
+  ListItemHorizontal,
+  type ListItemHorizontalProps,
+} from './ListItemHorizontal';

@@ -4,9 +4,9 @@ import {
   NativeStackNavigationOptions,
 } from '@react-navigation/native-stack';
 
-import { WeatherDetails } from '../screens/WeatherDetails';
-import { WeatherList } from '../screens/WeatherList';
-import { Colors } from '../theme/constants';
+import { WeatherDetails } from 'src/screens/WeatherDetails';
+import { WeatherList } from 'src/screens/WeatherList';
+import { Colors } from 'src/theme/constants';
 
 import { RootNavigationParamList } from './RootNavigation.types';
 
