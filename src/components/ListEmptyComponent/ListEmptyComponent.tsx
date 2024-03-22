@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from 'react-native';
 
 export const ListEmptyComponent = () => {
   return (
-    <View style={styles.container}>
+    <View testID={'test-ListEmptyComponent'} style={styles.container}>
       <Text style={styles.text}>No items on list</Text>
     </View>
   );
