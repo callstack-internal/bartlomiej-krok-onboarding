@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet } from 'react-native';
 
-import { Colors } from '../../theme/constants';
+import { Colors } from 'src/theme/constants';
 
 interface Props {
   label: string;

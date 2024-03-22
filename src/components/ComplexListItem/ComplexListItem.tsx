@@ -1,39 +1,40 @@
 import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
 
-import { WeatherItem } from '../../network/queries/weather/weather.types';
-import { Colors } from '../../theme/constants';
-import { ChevronRight } from '../ChevronRight';
-import { Chip } from '../Chip';
+import { ChevronRight, Chip } from 'src/components';
+import { Colors } from 'src/theme/constants';
 
 interface Props {
-  weather: WeatherItem;
-  onPress?: (item: WeatherItem) => void;
+  imageUri?: string;
+  title?: string;
+  subtitle?: string;
+  labelText?: string;
+  onPress?: () => void;
   hideArrow?: boolean;
 }
 
-export const WeatherListItem = (props: Props) => {
-  const { weather, onPress, hideArrow } = props;
-
-  const onItemPress = () => onPress && onPress(weather);
+export const ComplexListItem = (props: Props) => {
+  const { imageUri, labelText, title, subtitle, onPress, hideArrow } = props;
 
   const Component = onPress ? Pressable : View;
 
   return (
-    <Component onPress={onItemPress} style={styles.itemWrapper}>
+    <Component onPress={onPress} style={styles.itemWrapper}>
       <View style={styles.imageWrapper}>
-        <Image
-          style={styles.image}
-          source={{
-            uri: weather.imageUri,
-          }}
-        />
+        {!!imageUri && (
+          <Image
+            style={styles.image}
+            source={{
+              uri: imageUri,
+            }}
+          />
+        )}
       </View>
       <View style={styles.content}>
         <View>
-          <Text style={styles.title}>{weather.cityName}</Text>
-          <Text style={styles.subtitle}>{weather.weatherDescription}</Text>
+          <Text style={styles.title}>{title}</Text>
+          <Text style={styles.subtitle}>{subtitle}</Text>
         </View>
-        <Chip label={weather.temp} />
+        {!!labelText && <Chip label={labelText} />}
       </View>
 
       <View style={styles.iconRight}>

@@ -1,13 +1,13 @@
 import { useCallback } from 'react';
 import { FlatList, ListRenderItemInfo } from 'react-native';
 
-import { Divider } from '../../components/Divider';
 import {
+  ComplexListItem,
+  Divider,
   ListItemHorizontal,
   ListItemHorizontalProps,
-} from '../../components/ListItemHorizontal/ListItemHorizontal';
-import { WeatherListItem } from '../../components/WeatherListItem';
-import { useLoggedRoute } from '../../navigation/useRootNavigationRoute';
+} from 'src/components';
+import { useLoggedRoute } from 'src/navigation/useRootNavigationRoute';
 
 import { mapWeatherItemToList } from './WeatherDetails.utils';
 
@@ -25,7 +25,13 @@ export const WeatherDetails = () => {
 
   const renderHeader = (
     <>
-      <WeatherListItem weather={weatherItem} hideArrow />
+      <ComplexListItem
+        title={weatherItem.cityName}
+        subtitle={weatherItem.weatherDescription}
+        imageUri={weatherItem.imageUri}
+        labelText={weatherItem.temp}
+        hideArrow
+      />
       <Divider />
     </>
   );

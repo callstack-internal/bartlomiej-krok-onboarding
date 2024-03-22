@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native';
 
-import { Colors } from '../../theme/constants';
+import { Colors } from 'src/theme/constants';
 
 export interface ListItemHorizontalProps {
   label: string;
