@@ -5,12 +5,13 @@ import { Colors } from 'src/theme/constants';
 export interface ListItemHorizontalProps {
   label: string;
   value: string;
+  testID: string;
 }
 
 export const ListItemHorizontal = (props: ListItemHorizontalProps) => {
-  const { label, value } = props;
+  const { label, value, testID } = props;
   return (
-    <View style={styles.container}>
+    <View testID={testID} style={styles.container}>
       <Text style={styles.label}>{label}</Text>
       <Text style={styles.value}>{value}</Text>
     </View>
