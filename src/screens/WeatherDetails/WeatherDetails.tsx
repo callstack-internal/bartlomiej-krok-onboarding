@@ -26,6 +26,7 @@ export const WeatherDetails = () => {
   const renderHeader = (
     <>
       <ComplexListItem
+        id={weatherItem.id}
         title={weatherItem.cityName}
         subtitle={weatherItem.weatherDescription}
         imageUri={weatherItem.imageUri}
@@ -38,6 +39,7 @@ export const WeatherDetails = () => {
 
   return (
     <FlatList
+      testID={'test-WeatherDetails'}
       keyExtractor={keyExtractor}
       data={listItems}
       renderItem={renderItem}

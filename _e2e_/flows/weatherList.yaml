@@ -1,0 +1,8 @@
+appId: com.bkonboarding
+---
+- assertVisible: "Weather"
+#  Warsaw city id: 756135
+- assertVisible: "Warsaw"
+
+- tapOn:
+    id: "test-ComplexListItem-756135"

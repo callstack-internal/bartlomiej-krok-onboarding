@@ -4,6 +4,7 @@ import { ChevronRight, Chip } from 'src/components';
 import { Colors } from 'src/theme/constants';
 
 interface Props {
+  id: string;
   imageUri?: string;
   title?: string;
   subtitle?: string;
@@ -13,12 +14,17 @@ interface Props {
 }
 
 export const ComplexListItem = (props: Props) => {
-  const { imageUri, labelText, title, subtitle, onPress, hideArrow } = props;
+  const { imageUri, labelText, title, subtitle, onPress, hideArrow, id } =
+    props;
 
   const Component = onPress ? Pressable : View;
 
   return (
-    <Component onPress={onPress} style={styles.itemWrapper}>
+    <Component
+      testID={`test-ComplexListItem-${id}`}
+      onPress={onPress}
+      style={styles.itemWrapper}
+    >
       <View style={styles.imageWrapper}>
         {!!imageUri && (
           <Image

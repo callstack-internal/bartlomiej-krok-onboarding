@@ -3,7 +3,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-        "src/*": ["./src/*"]
+        "src/*": ["./src/*"],
+        "_jest_/*": ["./_jest_/*"]
     }
   },
 }

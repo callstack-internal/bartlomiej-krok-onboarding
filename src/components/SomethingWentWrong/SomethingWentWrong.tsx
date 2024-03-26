@@ -8,12 +8,16 @@ export const SomethingWentWrong = (props: Props) => {
   const { retry } = props;
 
   return (
-    <View style={styles.container}>
+    <View testID={'test-SomethingWentWrong'} style={styles.container}>
       <View style={styles.titleWrapper}>
         <Text style={styles.title}>Something went wrong.</Text>
       </View>
       <Text>Please try again later or contact support. </Text>
-      <Button title={'Retry'} onPress={retry} />
+      <Button
+        testID={'test-SomethingWentWrong-retry'}
+        title={'Retry'}
+        onPress={retry}
+      />
     </View>
   );
 };

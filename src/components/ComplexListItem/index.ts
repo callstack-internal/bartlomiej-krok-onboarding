@@ -1,1 +1,1 @@
-export { ComplexListItem } from './ComplexListItem.tsx';
+export { ComplexListItem } from './ComplexListItem';

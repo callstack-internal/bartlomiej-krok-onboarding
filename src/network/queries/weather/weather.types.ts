@@ -1,5 +1,5 @@
 export type WeatherItem = {
-  id: number;
+  id: string;
   cityName: string;
   weatherDescription: string;
   temp: string;

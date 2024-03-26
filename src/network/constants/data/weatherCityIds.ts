@@ -1,7 +1,7 @@
 export const weatherCityIds = [
+  756135, // Warsaw, PL
   703448, // Kyiv, UA
   692194, // Sumy, UA
-  756135, // Warsaw, PL
   3081368, // Wrocław, PL
   3067696, // Prague, CZ
   3077916, // České Budějovice, CZ

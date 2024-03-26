@@ -37,6 +37,7 @@ export const WeatherList = () => {
     ({ item }: ListRenderItemInfo<WeatherItem>) => {
       return (
         <ComplexListItem
+          id={item.id}
           title={item.cityName}
           subtitle={item.weatherDescription}
           imageUri={item.imageUri}
@@ -63,6 +64,7 @@ export const WeatherList = () => {
 
   return (
     <FlatList
+      testID={'test-WeatherList'}
       data={data}
       ListEmptyComponent={ListEmptyComponent}
       refreshControl={

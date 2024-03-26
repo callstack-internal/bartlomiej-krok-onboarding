@@ -3,7 +3,7 @@ import { ActivityIndicator, StyleSheet, View } from 'react-native';
 export const ScreenLoading = () => {
   return (
     <View style={styles.container}>
-      <ActivityIndicator size={'large'} />
+      <ActivityIndicator testID={'test-ScreenLoading'} size={'large'} />
     </View>
   );
 };
