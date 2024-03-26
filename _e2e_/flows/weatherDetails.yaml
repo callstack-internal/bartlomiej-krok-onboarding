@@ -1,0 +1,8 @@
+appId: com.bkonboarding
+---
+- assertVisible: "Details"
+- assertVisible: "Warsaw"
+- assertVisible: 'Humidity'
+- assertVisible: 'Pressure'
+- assertVisible: 'Wind Speed'
+- assertVisible: 'Cloud Cover'

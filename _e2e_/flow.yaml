@@ -1,3 +1,10 @@
-appId: com.bkOnboarding
+appId: com.bkonboarding
 ---
-- launchApp
+- launchApp:
+    clearState: true
+
+- runFlow: flows/weatherList.yaml
+- runFlow: flows/weatherDetails.yaml
+#  Check if user can go back to list and again to details
+- back
+- runFlow: flows/weatherList.yaml
