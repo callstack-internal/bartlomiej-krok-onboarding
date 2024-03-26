@@ -4,13 +4,13 @@ import {
   waitFor,
   within,
 } from '@testing-library/react-native';
-import { weatherListMockData } from '_jest/mocks/weatherList/weatherListMockData';
+import { weatherListMockData } from '_jest_/mocks/weatherList/weatherListMockData';
 import {
   fetchWeatherListError,
   fetchWeatherListSuccess,
   fetchWeatherListSuccessNoData,
-} from '_jest/mocks/weatherList/weatherListServiceMock';
-import { TestWrapperProvider } from '_jest/testHelpers';
+} from '_jest_/mocks/weatherList/weatherListServiceMock';
+import { TestWrapperProvider } from '_jest_/testHelpers';
 
 import { WeatherList } from 'src/screens/WeatherList/WeatherList';
 

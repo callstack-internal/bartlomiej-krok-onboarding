@@ -1,10 +1,11 @@
-import { fakeServer } from '_jest/mocks/fakeServer';
-import { weatherListMockData } from '_jest/mocks/weatherList/weatherListMockData';
-import { handleServerResponse } from '_jest/testHelpers';
 import { http, HttpResponse } from 'msw';
 
 import { ApiRoutes } from 'src/network/api/apiRoutes';
 import { API_URL } from 'src/network/constants/config';
+
+import { fakeServer } from '../../mocks/fakeServer';
+import { weatherListMockData } from '../../mocks/weatherList/weatherListMockData';
+import { handleServerResponse } from '../../testHelpers';
 
 export const fetchWeatherListSuccess = () => {
   handleServerResponse(

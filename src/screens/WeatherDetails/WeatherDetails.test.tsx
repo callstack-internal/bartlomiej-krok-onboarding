@@ -1,6 +1,6 @@
 import { render, waitFor } from '@testing-library/react-native';
-import { weatherDetailsMockData } from '_jest/mocks/weatherList/weatherListMockData';
-import { TestWrapperProvider } from '_jest/testHelpers';
+import { weatherDetailsMockData } from '_jest_/mocks/weatherList/weatherListMockData';
+import { TestWrapperProvider } from '_jest_/testHelpers';
 
 import { mapWeatherResponseToItem } from 'src/network/queries/weather/getWeatherListQuery';
 import { WeatherDetails } from 'src/screens/WeatherDetails/WeatherDetails';
