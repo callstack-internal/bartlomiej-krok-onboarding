@@ -6,7 +6,7 @@ module.exports = {
       {
         alias: {
           src: './src',
-          _jest: './_jest_',
+          _jest_: './_jest_',
         },
       },
     ],
