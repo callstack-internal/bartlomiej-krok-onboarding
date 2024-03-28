@@ -13,7 +13,7 @@ import {
   ScreenLoading,
   SomethingWentWrong,
 } from 'src/components';
-import { useLocation } from 'src/hooks/location/useLocation.ts';
+import { UserWeatherHeader } from 'src/components/UserWeatherHeader';
 import { useRefreshing } from 'src/hooks/useRefreshing';
 import { Screens } from 'src/navigation/routes.types';
 import { useRootNavigation } from 'src/navigation/useRootNavigation';
@@ -23,7 +23,6 @@ import { WeatherItem } from 'src/network/queries/weather/weather.types';
 
 export const WeatherList = () => {
   const { navigate } = useRootNavigation();
-  useLocation();
   const { error, data, isLoading, refetch } =
     useWeatherListQuery(weatherCityIds);
   const { refreshing, handleRefresh } = useRefreshing(refetch);
@@ -68,6 +67,7 @@ export const WeatherList = () => {
     <FlatList
       testID={'test-WeatherList'}
       data={data}
+      ListHeaderComponent={UserWeatherHeader}
       ListEmptyComponent={ListEmptyComponent}
       refreshControl={
         <RefreshControl refreshing={refreshing} onRefresh={handleRefresh} />

@@ -22,13 +22,15 @@ class LocationModule(reactContext: ReactApplicationContext) :
 
     @ReactMethod
     fun getCurrentLocation(promise: Promise) {
-        this.promise = promise
-
-        if (hasLocationPermission()) {
-            fetchLocation()
-        } else {
-            requestLocationPermission()
-        }
+        fetchLocation()
+// TODO: Remove test of code if not needed
+//        this.promise = promise
+//
+//        if (hasLocationPermission()) {
+//            fetchLocation()
+//        } else {
+//            requestLocationPermission()
+//        }
     }
 
     private fun hasLocationPermission(): Boolean {
