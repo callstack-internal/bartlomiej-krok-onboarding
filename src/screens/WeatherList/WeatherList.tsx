@@ -13,6 +13,7 @@ import {
   ScreenLoading,
   SomethingWentWrong,
 } from 'src/components';
+import { useLocation } from 'src/hooks/location/useLocation.ts';
 import { useRefreshing } from 'src/hooks/useRefreshing';
 import { Screens } from 'src/navigation/routes.types';
 import { useRootNavigation } from 'src/navigation/useRootNavigation';
@@ -22,6 +23,7 @@ import { WeatherItem } from 'src/network/queries/weather/weather.types';
 
 export const WeatherList = () => {
   const { navigate } = useRootNavigation();
+  useLocation();
   const { error, data, isLoading, refetch } =
     useWeatherListQuery(weatherCityIds);
   const { refreshing, handleRefresh } = useRefreshing(refetch);
